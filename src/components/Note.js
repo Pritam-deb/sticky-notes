@@ -1,11 +1,11 @@
 import React from 'react'
 import DeleteForeverRoundedIcon from '@mui/icons-material/DeleteForeverRounded';
-const Note = () => {
+const Note = ({id, text, date}) => {
     return (
         <div className="note">
-            <span>This is a new note</span>
+            <span>{text}</span>
             <div className="note-footer">
-                <small>Date</small>
+                <small>{date}</small>
                 <DeleteForeverRoundedIcon className="delete-icon" size="1.3em"/>
             </div>
         </div>
