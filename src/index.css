@@ -26,6 +26,21 @@ code {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
+.note.new{
+  background-color: rgb(190, 155, 236);
+}
+textarea{
+  border: none;
+  resize: none;
+  background-color: rgb(190, 155, 236);
+}
+textarea:focus{
+  outline: none;
+}
+
+.save{
+  background-color: blueviolet;
+}
 .note{
   background-color: rgb(96, 218, 201);
   border-radius: 7px;
