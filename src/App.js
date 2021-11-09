@@ -2,7 +2,7 @@ import NotesList from "./components/NotesList";
 
 function App() {
   return (
-    <div>
+    <div className='container'>
       <NotesList/>
     </div>
   );
