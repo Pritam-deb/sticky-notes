@@ -61,3 +61,24 @@ textarea:focus{
 .delete-icon{
   cursor: pointer;
 }
+
+.search{
+  display: flex;
+  align-items: center;
+  background-color: rgb(184, 184, 184);
+  border-radius: 10px;
+  padding: 5px;
+  margin: 1.5em;
+}
+
+.search input{
+  border: none;
+  background-color: rgb(184, 184, 184);
+}
+.search input:focus{
+  outline: none;
+}
+
+.search-icons{
+  cursor: pointer;
+}
