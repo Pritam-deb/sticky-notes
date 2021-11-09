@@ -14,10 +14,14 @@ const AddNote = ({handleAddNote}) => {
         transition: '0.4s',
         borderRadius: '10px',
       }));
+      //for checks and validation
+      const characterLimit = 200;
 
       const [noteText, setnoteText] = useState('')
       const handleChange = (event) =>{
-        setnoteText(event.target.value);
+        if(characterLimit - event.target.value.length >= 0){
+          setnoteText(event.target.value);
+        }
       }
 
       const handleClick = () => {
@@ -34,7 +38,7 @@ const AddNote = ({handleAddNote}) => {
         <div className="note new">
             <textarea rows='8' cols='10' placeholder='type a new note!!' onChange={handleChange} value={noteText}></textarea>
             <div className="note-footer">
-                <small>150 char remaining</small>
+                <small>{characterLimit - noteText.length} characters remaining</small>
                 <ColorButton variant="contained" size="small" onClick={handleClick}>Save</ColorButton>
             </div>
         </div>
