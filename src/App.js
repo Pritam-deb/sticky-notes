@@ -2,6 +2,11 @@ import NotesList from "./components/NotesList";
 import Search from "./components/Search";
 import { useState } from "react";
 import { nanoid } from "nanoid";
+import Theme from "./components/Theme";
+
+import { ChakraProvider } from "@chakra-ui/react";
+import { AnimatePresence } from "framer-motion";
+
 function App() {
   const [notes, setNotes] = useState([
     {
@@ -41,6 +46,13 @@ function App() {
 
   return (
     <div className="container">
+      <ChakraProvider>
+        <AnimatePresence exitBeforeEnter initial={true}>
+          <Theme/>
+          
+        </AnimatePresence>
+        
+      </ChakraProvider>
       <Search handleSearchNote={setSearchText} />
       <NotesList
         notes={notes.filter((note) =>
@@ -49,6 +61,7 @@ function App() {
         handleAddNote={addNote}
         handleDeleteNote={deleteNote}
       />
+      
     </div>
   );
 }

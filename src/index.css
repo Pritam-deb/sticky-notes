@@ -37,6 +37,10 @@ textarea{
 textarea:focus{
   outline: none;
 }
+textarea::placeholder{
+  color: black;
+  opacity: 0.5;
+}
 
 .save{
   background-color: blueviolet;
@@ -78,7 +82,18 @@ textarea:focus{
 .search input:focus{
   outline: none;
 }
+.search input::placeholder{
+  color: black;
+  opacity: 0.5;
+}
 
 .search-icons{
   cursor: pointer;
+}
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
 }
